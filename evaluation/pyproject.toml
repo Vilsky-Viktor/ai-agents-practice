@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "evaluation"
+version = "0.1.0"
+description = ""
+authors = ["viktor-vilskyi <viktor@terrificlive.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.15"
+python-dotenv = "^1.2.3"
+langfuse = "^4.15.4"
+openinference-instrumentation-smolagents = "^0.1.40"
+smolagents = "^1.26.0"
+ddgs = "^9.16.0"
+pandas = "^3.0.6"
+datasets = "^5.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "smolagents_agent"
+version = "0.1.0"
+description = ""
+authors = ["viktor-vilskyi <viktor@terrificlive.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.15"
+huggingface-hub = "^1.31.0"
+smolagents = {extras = ["all"], version = "^1.26.0"}
+ddgs = "^9.16.0"
+markdownify = "^1.2.3"
+requests = "^2.34.2"
+opentelemetry-sdk = "^1.44.0"
+opentelemetry-exporter-otlp = "^1.44.0"
+openinference-instrumentation-smolagents = "^0.1.40"
+langfuse = "^4.15.3"
+python-dotenv = "^1.2.3"
+gradio-client = "^1.13.0"
+langchain-community = "^0.4.2"
+langchain = "^1.4.0"
+mypy-extensions = "^1.1.0"
+google-search-results = "^2.4.2"
+mcp = "^1.30.0"
+rank-bm25 = "^0.2.2"
+plotly = "^7.1.0"
+geopandas = "^1.1.4"
+shapely = "^2.1.2"
+kaleido = "^1.4.0"
+helium = "^7.0.3"
+selenium = "^4.49.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lora-training"
+version = "0.1.0"
+description = ""
+authors = ["viktor-vilskyi <viktor@terrificlive.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+bitsandbytes = "^0.50.2"
+peft = "^0.21.0"
+transformers = "^5.17.0"
+datasets = "^5.0.1"
+trl = "^1.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

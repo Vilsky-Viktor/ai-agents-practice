@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rag"
+version = "0.1.0"
+description = ""
+authors = ["viktor-vilskyi <viktor@terrificlive.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+datasets = "^5.0.1"
+langchain-core = "^1.6.3"
+langchain-community = "^0.4.2"
+python-dotenv = "^1.2.3"
+langgraph = "^1.2.11"
+langchain-huggingface = "^1.2.2"
+rank-bm25 = "^0.2.2"
+sentence-transformers = "^6.1.0"
+ddgs = "^9.16.0"
+langchain-classic = "^1.0.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
