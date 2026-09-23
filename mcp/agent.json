@@ -1,0 +1,13 @@
+{
+    "name": "playwright-agent",
+    "description": "Agent with Playwright MCP server",
+    "model": "Qwen/Qwen2.5-72B-Instruct",
+    "provider": "nebius",
+    "servers": [
+        {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["@playwright/mcp@latest"]
+        }
+    ]
+}

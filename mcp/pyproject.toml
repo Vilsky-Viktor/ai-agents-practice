@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mcp-practice"
+version = "0.1.0"
+description = ""
+authors = ["viktor-vilskyi <viktor@terrificlive.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mcp = {extras = ["cli"], version = "^2.2.0"}
+huggingface-hub = {version = ">=0.32.0", extras = ["mcp"]}
+gradio = "^6.28.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
