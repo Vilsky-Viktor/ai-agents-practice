@@ -1,7 +1,7 @@
-from mcp.server.mcpserver import MCPServer
+from mcp.server.fastmcp import FastMCP
 
 # Create an MCP server
-mcp = MCPServer("Weather Service")
+mcp = FastMCP("Weather Service")
 
 # Tool implementation
 
