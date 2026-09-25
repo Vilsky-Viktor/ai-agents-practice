@@ -17,9 +17,10 @@ This solution extends Modules 1 and 2 with:
    poetry install
    ```
 
-2. Set up Slack webhook:
+2. Set up Slack webhook — copy `.env.example` to `.env` and fill in the URL (loaded automatically via `python-dotenv`):
    ```bash
-   export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+   cp .env.example .env
+   # then edit .env: SLACK_WEBHOOK_URL="https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
    ```
 
 3. Start services:
@@ -41,3 +42,12 @@ See `manual_test.md` for comprehensive testing instructions using curl commands 
 ## Key Learning Outcomes
 
 This solution demonstrates all MCP primitives working together for real-world team automation.
+
+## Notes
+
+- Migrated from `uv` to Poetry; `mcp` is pinned to `^1.30.0` since `server.py` uses the `FastMCP` API (renamed to `MCPServer` in `mcp` 2.x — see [`mcp/README.md`](../README.md#notes) for why the sibling projects stay on 1.x too).
+- `TEMPLATES_DIR` resolves to a local `templates/` folder next to `server.py`; `get_pr_templates()` auto-creates any missing template file via `create_default_template()`.
+- Register with Claude Code from any directory using absolute paths:
+  ```bash
+  claude mcp add pr-agent-slack -- env -u VIRTUAL_ENV poetry run --directory /absolute/path/to/claude_mcp python /absolute/path/to/claude_mcp/server.py
+  ```
